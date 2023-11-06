@@ -1,0 +1,14 @@
+{
+	"configurations": [
+		{
+			"name": "Unreal_SideScroll1Editor Editor Win64 Development (Unreal_SideScroll1)",
+			"intelliSenseMode": "msvc-x64",
+			"compileCommands": "E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Unreal_SideScroll1.json"
+		},
+		{
+			"name": "Win32",
+			"intelliSenseMode": "msvc-x64",
+			"compileCommands": "E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default.json"
+		}
+	]
+}

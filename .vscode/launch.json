@@ -1,0 +1,128 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Unreal_SideScroll1 (Debug)",
+			"request": "launch",
+			"preLaunchTask": "Unreal_SideScroll1 Win64 Debug Build",
+			"program": "E:\\UnrealProject\\Unreal_SideScroll1\\Binaries\\Win64\\UE4-Win64-Debug.exe",
+			"args": [
+			],
+			"cwd": "E:\\Unreal\\UE_4.27",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Unreal\\UE_4.27\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Unreal_SideScroll1 (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "Unreal_SideScroll1 Win64 DebugGame Build",
+			"program": "E:\\UnrealProject\\Unreal_SideScroll1\\Binaries\\Win64\\UE4-Win64-DebugGame.exe",
+			"args": [
+			],
+			"cwd": "E:\\Unreal\\UE_4.27",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Unreal\\UE_4.27\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Unreal_SideScroll1 (Development)",
+			"request": "launch",
+			"preLaunchTask": "Unreal_SideScroll1 Win64 Development Build",
+			"program": "E:\\UnrealProject\\Unreal_SideScroll1\\Binaries\\Win64\\UE4.exe",
+			"args": [
+			],
+			"cwd": "E:\\Unreal\\UE_4.27",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Unreal\\UE_4.27\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Unreal_SideScroll1 (Shipping)",
+			"request": "launch",
+			"preLaunchTask": "Unreal_SideScroll1 Win64 Shipping Build",
+			"program": "E:\\UnrealProject\\Unreal_SideScroll1\\Binaries\\Win64\\UE4-Win64-Shipping.exe",
+			"args": [
+			],
+			"cwd": "E:\\Unreal\\UE_4.27",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Unreal\\UE_4.27\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Unreal_SideScroll1 (Test)",
+			"request": "launch",
+			"preLaunchTask": "Unreal_SideScroll1 Win64 Test Build",
+			"program": "E:\\UnrealProject\\Unreal_SideScroll1\\Binaries\\Win64\\UE4-Win64-Test.exe",
+			"args": [
+			],
+			"cwd": "E:\\Unreal\\UE_4.27",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Unreal\\UE_4.27\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Unreal_SideScroll1Editor (Debug)",
+			"request": "launch",
+			"preLaunchTask": "Unreal_SideScroll1Editor Win64 Debug Build",
+			"program": "E:\\Unreal\\UE_4.27\\Engine\\Binaries\\Win64\\UE4Editor-Win64-Debug.exe",
+			"args": [
+				"E:\\UnrealProject\\Unreal_SideScroll1\\Unreal_SideScroll1.uproject"
+			],
+			"cwd": "E:\\Unreal\\UE_4.27",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Unreal\\UE_4.27\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Unreal_SideScroll1Editor (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "Unreal_SideScroll1Editor Win64 DebugGame Build",
+			"program": "E:\\Unreal\\UE_4.27\\Engine\\Binaries\\Win64\\UE4Editor-Win64-DebugGame.exe",
+			"args": [
+				"E:\\UnrealProject\\Unreal_SideScroll1\\Unreal_SideScroll1.uproject"
+			],
+			"cwd": "E:\\Unreal\\UE_4.27",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Unreal\\UE_4.27\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Unreal_SideScroll1Editor (Development)",
+			"request": "launch",
+			"preLaunchTask": "Unreal_SideScroll1Editor Win64 Development Build",
+			"program": "E:\\Unreal\\UE_4.27\\Engine\\Binaries\\Win64\\UE4Editor.exe",
+			"args": [
+				"E:\\UnrealProject\\Unreal_SideScroll1\\Unreal_SideScroll1.uproject"
+			],
+			"cwd": "E:\\Unreal\\UE_4.27",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Unreal\\UE_4.27\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Generate Project Files",
+			"type": "clr",
+			"request": "launch",
+			"program": "E:\\Unreal\\UE_4.27\\Engine\\Binaries\\DotNET\\UnrealBuildTool.exe",
+			"console": "externalTerminal",
+			"args": [
+				"-projectfiles",
+				"-vscode",
+				"-project=E:\\UnrealProject\\Unreal_SideScroll1\\Unreal_SideScroll1.uproject",
+				"-game",
+				"-engine"
+			],
+			"internalConsoleOptions": "openOnSessionStart",
+			"cwd": "E:\\Unreal\\UE_4.27"
+		}
+	]
+}
