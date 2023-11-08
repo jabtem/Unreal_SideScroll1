@@ -6,8 +6,8 @@
 #include "GameFramework/GameModeBase.h"
 #include "DefaultGameModeBase.generated.h"
 
-UCLASS()
-class UNREAL_SIDESCROLL1_API ADefaultGameModeBase : public AGameModeBase
+UCLASS(MinimalAPI)
+class ADefaultGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
 	
