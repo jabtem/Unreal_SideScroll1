@@ -1,14 +1,17 @@
 {
-	"configurations": [
-		{
-			"name": "Unreal_SideScroll1Editor Editor Win64 Development (Unreal_SideScroll1)",
-			"intelliSenseMode": "msvc-x64",
-			"compileCommands": "E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Unreal_SideScroll1.json"
-		},
-		{
-			"name": "Win32",
-			"intelliSenseMode": "msvc-x64",
-			"compileCommands": "E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default.json"
-		}
-	]
+    "configurations": [
+        {
+            "name": "Unreal_SideScroll1Editor Editor Win64 Development (Unreal_SideScroll1)",
+            "intelliSenseMode": "msvc-x64",
+            "compileCommands": "E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Unreal_SideScroll1.json",
+            "compilerPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe"
+        },
+        {
+            "name": "Win32",
+            "intelliSenseMode": "msvc-x64",
+            "compileCommands": "E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default.json",
+            "compilerPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe"
+        }
+    ],
+    "version": 4
 }

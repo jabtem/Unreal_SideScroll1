@@ -1,67 +1,77 @@
 [
-	{
-		"file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Private\\\\DefaultGameModeBase.cpp",
-		"command": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
-		"directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
-	},
-	{
-		"file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Private\\\\PlayCharacter.cpp",
-		"command": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
-		"directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
-	},
-	{
-		"file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Private\\\\PlayerAnimInstance.cpp",
-		"command": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
-		"directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
-	},
-	{
-		"file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Private\\\\Unreal_SideScroll1Character.cpp",
-		"command": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
-		"directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
-	},
-	{
-		"file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Private\\\\Unreal_SideScroll1GameMode.cpp",
-		"command": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
-		"directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
-	},
-	{
-		"file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Public\\\\DefaultGameModeBase.h",
-		"command": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
-		"directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
-	},
-	{
-		"file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Public\\\\PlayCharacter.h",
-		"command": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
-		"directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
-	},
-	{
-		"file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Public\\\\PlayerAnimInstance.h",
-		"command": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
-		"directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
-	},
-	{
-		"file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Public\\\\Unreal_SideScroll1Character.h",
-		"command": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
-		"directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
-	},
-	{
-		"file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Public\\\\Unreal_SideScroll1GameMode.h",
-		"command": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
-		"directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
-	},
-	{
-		"file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Unreal_SideScroll1.Build.cs",
-		"command": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
-		"directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
-	},
-	{
-		"file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Unreal_SideScroll1.cpp",
-		"command": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
-		"directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
-	},
-	{
-		"file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Unreal_SideScroll1.h",
-		"command": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
-		"directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
-	}
+    {
+        "file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Private\\\\DefaultGameModeBase.cpp",
+        "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe\" @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
+        "directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Private\\\\MovePlatform.cpp",
+        "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe\" @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
+        "directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Private\\\\PlayCharacter.cpp",
+        "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe\" @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
+        "directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Private\\\\PlayerAnimInstance.cpp",
+        "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe\" @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
+        "directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Private\\\\Unreal_SideScroll1Character.cpp",
+        "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe\" @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
+        "directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Private\\\\Unreal_SideScroll1GameMode.cpp",
+        "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe\" @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
+        "directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Public\\\\DefaultGameModeBase.h",
+        "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe\" @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
+        "directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Public\\\\MovePlatform.h",
+        "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe\" @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
+        "directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Public\\\\PlayCharacter.h",
+        "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe\" @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
+        "directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Public\\\\PlayerAnimInstance.h",
+        "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe\" @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
+        "directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Public\\\\Unreal_SideScroll1Character.h",
+        "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe\" @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
+        "directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Public\\\\Unreal_SideScroll1GameMode.h",
+        "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe\" @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
+        "directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Unreal_SideScroll1.Build.cs",
+        "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe\" @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
+        "directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Unreal_SideScroll1.cpp",
+        "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe\" @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
+        "directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "E:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Unreal_SideScroll1.h",
+        "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe\" @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Default\\Unreal_SideScroll1.210.rsp\"",
+        "directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
+    }
 ]
