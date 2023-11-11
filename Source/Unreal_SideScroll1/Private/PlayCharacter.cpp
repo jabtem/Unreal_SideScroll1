@@ -7,6 +7,11 @@
 #include "Components/InputComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "DefaultGameModeBase.h"
+#include "Kismet/GameplayStatics.h"
+#include "MainHUD.h"
+#include "InputButton.h"
+#include "Components/Button.h"
 
 // Sets default values
 APlayCharacter::APlayCharacter()
@@ -55,7 +60,15 @@ APlayCharacter::APlayCharacter()
 void APlayCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	 
+	ADefaultGameModeBase* GameMode = Cast<ADefaultGameModeBase>(UGameplayStatics::GetGameMode(GetWorld()));
+	if(GameMode)
+	{
+		UMainHUD* MainHUD = Cast<UMainHUD>(GameMode->CurrentWidget);
+		if(MainHUD)
+			MainHUD->Button_Jump->GetActionButton()->OnPressed.AddDynamic(this,&APlayCharacter::Jump);
+	}
+
 }
 
 void APlayCharacter::PostInitializeComponents()

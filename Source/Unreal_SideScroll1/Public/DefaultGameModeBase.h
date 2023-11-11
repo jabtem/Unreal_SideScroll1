@@ -13,4 +13,12 @@ class ADefaultGameModeBase : public AGameModeBase
 	
 public:
 	ADefaultGameModeBase();
+
+public:
+	UPROPERTY(EditAnywhere,BlueprintReadOnly, Meta=(AllowPrivateAccess=true))
+	TSubclassOf<UUserWidget> HUD_Class;
+
+	UPROPERTY(EditAnywhere,BlueprintReadOnly, Meta=(AllowPrivateAccess=true))
+	UUserWidget* CurrentWidget;
+
 };
