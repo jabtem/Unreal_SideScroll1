@@ -31,10 +31,10 @@ private:
 	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,Meta=(AllowPrivateAccess=true))
 	class UInterpToMovementComponent* InterpToMove;
 
-	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category=MovePoint, Meta=(AllowPrivateAccess=true))
+	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category=MovePoint, Meta=(AllowPrivateAccess=true, MakeEditWidget = true))
 	FVector Start;
 
-	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category=MovePoint, Meta=(AllowPrivateAccess=true))
+	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category=MovePoint, Meta=(AllowPrivateAccess=true, MakeEditWidget = true))
 	FVector End;
 
 	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category=MovePoint, Meta=(AllowPrivateAccess=true))

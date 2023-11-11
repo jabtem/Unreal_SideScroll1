@@ -9,10 +9,9 @@ AMovePlatform::AMovePlatform()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	auto Default = CreateDefaultSubobject<USceneComponent>(TEXT("Default"));
-	RootComponent = Default;
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	InterpToMove = CreateDefaultSubobject<UInterpToMovementComponent>(TEXT("InterpToMove"));
+	RootComponent = Mesh;
 
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> SM(TEXT("StaticMesh'/Game/Asset/Geometry/Meshes/1M_Cube.1M_Cube'"));
 	if(SM.Succeeded())

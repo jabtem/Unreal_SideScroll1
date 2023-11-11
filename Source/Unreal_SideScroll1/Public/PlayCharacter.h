@@ -26,6 +26,10 @@ protected:
 	void Run();
 	void StopRunning();
 
+	//캐릭터 점프
+	void Jump();
+	void StopJumping();
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

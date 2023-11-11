@@ -45,6 +45,7 @@ APlayCharacter::APlayCharacter()
 	GetCharacterMovement()->GroundFriction = 3.f;
 	GetCharacterMovement()->MaxWalkSpeed = 600.f;
 	GetCharacterMovement()->MaxFlySpeed = 600.f;
+	JumpMaxCount = 2;
 
 	//캡슐컴포넌트 세팅
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
@@ -75,8 +76,8 @@ void APlayCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
-	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
+	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &APlayCharacter::Jump);
+	PlayerInputComponent->BindAction("Jump", IE_Released, this, &APlayCharacter::StopJumping);
 	PlayerInputComponent->BindAction("Run", IE_Pressed, this, &APlayCharacter::Run);
 	PlayerInputComponent->BindAction("Run", IE_Released, this, &APlayCharacter::StopRunning);
 	PlayerInputComponent->BindAxis("MoveRight", this, &APlayCharacter::LeftRight);
@@ -97,3 +98,17 @@ void APlayCharacter::StopRunning()
 	GetCharacterMovement()->MaxWalkSpeed = 600.f;
 }
 
+void APlayCharacter::Jump()
+{
+	if(GetCharacterMovement()->IsFalling())
+		GetCharacterMovement()->JumpZVelocity = 800.f;
+	bPressedJump = true;
+	JumpKeyHoldTime = 0.0f;
+}
+
+void APlayCharacter::StopJumping()
+{
+	bPressedJump = false;
+	GetCharacterMovement()->JumpZVelocity = 1000.f;
+	ResetJumpState();
+}
