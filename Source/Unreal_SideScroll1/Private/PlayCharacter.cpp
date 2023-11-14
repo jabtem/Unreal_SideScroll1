@@ -5,6 +5,7 @@
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
+#include "Components/AudioComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "DefaultGameModeBase.h"
@@ -12,6 +13,8 @@
 #include "MainHUD.h"
 #include "InputButton.h"
 #include "Components/Button.h"
+#include "Sound/SoundCue.h"
+#include "CharacterSoundContainer.h"
 
 // Sets default values
 APlayCharacter::APlayCharacter()
@@ -21,6 +24,11 @@ APlayCharacter::APlayCharacter()
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = false;
 	bUseControllerRotationRoll = false;
+	
+	//사운드 컨테이너
+	static ConstructorHelpers::FObjectFinder<UObject> SC(TEXT("Blueprint'/Game/BluePrints/Actor/Player/BP_Sound.BP_Sound_C'"));
+	if(SC.Succeeded())
+		SoundContainer = SC.Object;
 
 	//스켈레탈메쉬 세팅
 	static ConstructorHelpers::FObjectFinder<USkeletalMesh> SkeltalMesh(TEXT("SkeletalMesh'/Game/Asset/Mannequin/Character/Mesh/SK_Mannequin.SK_Mannequin'"));
@@ -54,26 +62,41 @@ APlayCharacter::APlayCharacter()
 
 	//캡슐컴포넌트 세팅
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
+
+	//오디오컴포넌트
+	AudioComp = CreateDefaultSubobject<UAudioComponent>(TEXT("Audio"));
+	AudioComp->bAutoActivate = false;
 }
 
 // Called when the game starts or when spawned
 void APlayCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	 
-	ADefaultGameModeBase* GameMode = Cast<ADefaultGameModeBase>(UGameplayStatics::GetGameMode(GetWorld()));
+
+}
+
+void APlayCharacter::PossessedBy(AController* NewController)
+{
+	Super::PossessedBy(NewController);
+	ADefaultGameModeBase* GameMode = Cast<ADefaultGameModeBase>(GetWorld()->GetAuthGameMode());
 	if(GameMode)
 	{
 		UMainHUD* MainHUD = Cast<UMainHUD>(GameMode->CurrentWidget);
 		if(MainHUD)
+		{
 			MainHUD->Button_Jump->GetActionButton()->OnPressed.AddDynamic(this,&APlayCharacter::Jump);
-	}
+			MainHUD->Button_LeftMove->GetActionButton()->OnPressed.AddDynamic(this,&APlayCharacter::MoveLeft);
+			MainHUD->Button_LeftMove->GetActionButton()->OnReleased.AddDynamic(this,&APlayCharacter::MoveReset);
+			MainHUD->Button_RightMove->GetActionButton()->OnPressed.AddDynamic(this,&APlayCharacter::MoveRight);
+			MainHUD->Button_RightMove->GetActionButton()->OnReleased.AddDynamic(this,&APlayCharacter::MoveReset);
+		}
 
+	}
 }
 
 void APlayCharacter::PostInitializeComponents()
 {
-	Super::PostInitializeComponents();
+	Super::PostInitializeComponents();	
 
 }
 
@@ -81,6 +104,9 @@ void APlayCharacter::PostInitializeComponents()
 void APlayCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	if(MoveVlaue != 0)
+		AddMovementInput(FVector(0.f,-1.f,0.f),MoveVlaue);
 
 }
 
@@ -101,11 +127,23 @@ void APlayCharacter::LeftRight(float Value)
 	AddMovementInput(FVector(0.f,-1.f,0.f),Value);
 }
 
+void APlayCharacter::MoveLeft()
+{
+	MoveVlaue = -1.f;
+}
+void APlayCharacter::MoveRight()
+{
+	MoveVlaue = 1.f;
+}
+void APlayCharacter::MoveReset()
+{
+	MoveVlaue = 0.f;
+}
+
 void APlayCharacter::Run()
 {
 	GetCharacterMovement()->MaxWalkSpeed = 1000.f;
 }
-
 void APlayCharacter::StopRunning()
 {
 	GetCharacterMovement()->MaxWalkSpeed = 600.f;
@@ -117,8 +155,10 @@ void APlayCharacter::Jump()
 		GetCharacterMovement()->JumpZVelocity = 800.f;
 	bPressedJump = true;
 	JumpKeyHoldTime = 0.0f;
-}
 
+	// AudioComp->SetSound(SoundContainer->GetJumpSound());
+	// AudioComp->Play();
+}
 void APlayCharacter::StopJumping()
 {
 	bPressedJump = false;

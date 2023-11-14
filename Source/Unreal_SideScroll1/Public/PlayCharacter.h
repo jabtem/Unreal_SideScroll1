@@ -14,14 +14,27 @@ class UNREAL_SIDESCROLL1_API APlayCharacter : public ACharacter
 public:
 	// Sets default values for this character's properties
 	APlayCharacter();
+	virtual void Tick(float DeltaTime) override;
+	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	virtual void PostInitializeComponents() override;
+	virtual void PossessedBy(AController* NewController) override;
 
-	//캐릭터 이동
+private:
+	//PC 캐릭터이동
 	void LeftRight(float Value);
+
+	//모바일 캐릭터 이동
+	UFUNCTION()
+	void MoveLeft();
+	UFUNCTION()
+	void MoveRight();
+	UFUNCTION()
+	void MoveReset();
+
 	//캐릭터 달리기
 	void Run();
 	void StopRunning();
@@ -31,11 +44,6 @@ protected:
 	void StopJumping();
 
 public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
@@ -43,5 +51,14 @@ private:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* Camera;
+
+	UPROPERTY()
+	float MoveVlaue;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Sound, meta = (AllowPrivateAccess = "true"))
+	class UAudioComponent* AudioComp;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta=(AllowPrivateAccess=true))
+	UObject* SoundContainer;
 
 };

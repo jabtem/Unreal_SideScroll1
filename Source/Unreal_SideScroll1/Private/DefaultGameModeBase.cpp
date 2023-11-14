@@ -2,8 +2,8 @@
 
 
 #include "DefaultGameModeBase.h"
-#include "Unreal_SideScroll1Character.h"
 #include "MainHUD.h"
+#include "PlayCharacter.h"
 
 ADefaultGameModeBase::ADefaultGameModeBase()
 {

@@ -15,6 +15,13 @@ class UNREAL_SIDESCROLL1_API UMainHUD : public UUserWidget
 	GENERATED_BODY()
 
 public:
+
 	UPROPERTY(meta=(BindWidget))
 	class UInputButton* Button_Jump;
+
+	UPROPERTY(meta=(BindWidget))
+	class UInputButton* Button_LeftMove;
+
+	UPROPERTY(meta=(BindWidget))
+	class UInputButton* Button_RightMove;
 };
