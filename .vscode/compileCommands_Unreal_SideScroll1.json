@@ -103,5 +103,15 @@
         "file": "e:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Private\\\\CharacterSoundContainer.cpp",
         "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe\" @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Unreal_SideScroll1\\Unreal_SideScroll1.210.rsp\"",
         "directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "e:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Private\\\\MoveLevel.cpp",
+        "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe\" @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Unreal_SideScroll1\\Unreal_SideScroll1.210.rsp\"",
+        "directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
+    },
+    {
+        "file": "e:\\\\UnrealProject\\\\Unreal_SideScroll1\\\\Source\\\\Unreal_SideScroll1\\\\Public\\\\MoveLevel.h",
+        "command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29333\\bin\\HostX64\\x64\\cl.exe\" @\"E:\\UnrealProject\\Unreal_SideScroll1\\.vscode\\compileCommands_Unreal_SideScroll1\\Unreal_SideScroll1.210.rsp\"",
+        "directory": "E:\\Unreal\\UE_4.27\\Engine\\Source"
     }
 ]

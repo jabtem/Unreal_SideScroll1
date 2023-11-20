@@ -24,11 +24,6 @@ APlayCharacter::APlayCharacter()
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = false;
 	bUseControllerRotationRoll = false;
-	
-	//사운드 컨테이너
-	static ConstructorHelpers::FObjectFinder<UObject> SC(TEXT("Blueprint'/Game/BluePrints/Actor/Player/BP_Sound.BP_Sound_C'"));
-	if(SC.Succeeded())
-		SoundContainer = SC.Object;
 
 	//스켈레탈메쉬 세팅
 	static ConstructorHelpers::FObjectFinder<USkeletalMesh> SkeltalMesh(TEXT("SkeletalMesh'/Game/Asset/Mannequin/Character/Mesh/SK_Mannequin.SK_Mannequin'"));
@@ -73,6 +68,9 @@ void APlayCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
+	UCharacterSoundContainer*  SoundContainer = NewObject<UCharacterSoundContainer>(this,SoundContainerClass);
+	if(SoundContainer)
+		AudioComp->SetSound(SoundContainer->GetJumpSound());
 }
 
 void APlayCharacter::PossessedBy(AController* NewController)
@@ -156,8 +154,7 @@ void APlayCharacter::Jump()
 	bPressedJump = true;
 	JumpKeyHoldTime = 0.0f;
 
-	// AudioComp->SetSound(SoundContainer->GetJumpSound());
-	// AudioComp->Play();
+	AudioComp->Play();
 }
 void APlayCharacter::StopJumping()
 {

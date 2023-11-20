@@ -59,6 +59,6 @@ private:
 	class UAudioComponent* AudioComp;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta=(AllowPrivateAccess=true))
-	UObject* SoundContainer;
+	TSubclassOf<class UCharacterSoundContainer> SoundContainerClass;
 
 };
