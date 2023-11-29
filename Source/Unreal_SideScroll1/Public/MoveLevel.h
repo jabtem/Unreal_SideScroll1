@@ -24,6 +24,9 @@ private:
 	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category=MoveLevel, Meta=(AllowPrivateAccess=true))
 	FString LevelName;
 
+	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category=MoveLevel, Meta=(AllowPrivateAccess=true))
+	class UNiagaraSystem* PortalEffect;
+
 	UPROPERTY(VisibleAnywhere)
 	class UBoxComponent* Trigger;
 };

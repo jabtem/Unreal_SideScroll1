@@ -5,6 +5,8 @@
 #include "Components/BoxComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "PlayCharacter.h"
+#include "NiagaraFunctionLibrary.h"
+#include "NiagaraComponent.h"
 
 // Sets default values
 AMoveLevel::AMoveLevel()
@@ -21,6 +23,10 @@ void AMoveLevel::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	if(PortalEffect)
+	{
+		UNiagaraComponent* NiagaraComp = UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(),PortalEffect, FVector(0.f,1000.f,930.f),GetActorRotation());
+	}
 }
 
 void AMoveLevel::NotifyActorBeginOverlap(AActor* OtherActor)
