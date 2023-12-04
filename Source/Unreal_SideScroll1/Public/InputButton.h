@@ -20,4 +20,7 @@ public:
 private :
 	UPROPERTY(meta=(BindWidget))
 	class UButton* Button_Action;
+
+	UPROPERTY(EditAnywhere)
+	class UTexture* Button_Icon;
 };
