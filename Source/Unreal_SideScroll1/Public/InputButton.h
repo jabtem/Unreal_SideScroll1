@@ -16,11 +16,24 @@ class UNREAL_SIDESCROLL1_API UInputButton : public UUserWidget
 
 public:
 	class UButton* GetActionButton(){return Button_Action;}
+// #if WITH_EDITOR
+// 	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
+// #endif
+
+protected:
+	virtual void NativePreConstruct() override;
 	
 private :
 	UPROPERTY(meta=(BindWidget))
 	class UButton* Button_Action;
 
+	UPROPERTY(meta=(BindWidget))
+	class UImage* Button_Image;
+
 	UPROPERTY(EditAnywhere)
-	class UTexture* Button_Icon;
+	FSlateBrush Button_Brush;
+
+	UPROPERTY(EditAnywhere)
+	FMargin Button_Margin;
+
 };
