@@ -14,11 +14,19 @@ class ADefaultGameModeBase : public AGameModeBase
 public:
 	ADefaultGameModeBase();
 
+	virtual void BeginPlay() override;
+
 public:
 	UPROPERTY(EditAnywhere,BlueprintReadOnly, Meta=(AllowPrivateAccess=true))
 	TSubclassOf<UUserWidget> HUD_Class;
 
 	UPROPERTY(EditAnywhere,BlueprintReadOnly, Meta=(AllowPrivateAccess=true))
 	UUserWidget* CurrentWidget;
+
+	UPROPERTY()
+	class UAudioComponent* AudioComp;
+
+	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category=Sound, Meta=(AllowPrivateAccess=true))
+	class USoundCue* BGM;
 
 };

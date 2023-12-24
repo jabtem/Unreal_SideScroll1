@@ -4,6 +4,8 @@
 #include "DefaultGameModeBase.h"
 #include "MainHUD.h"
 #include "PlayCharacter.h"
+#include "Components/AudioComponent.h"
+#include "Sound/SoundCue.h"
 
 ADefaultGameModeBase::ADefaultGameModeBase()
 {
@@ -22,4 +24,14 @@ ADefaultGameModeBase::ADefaultGameModeBase()
             CurrentWidget->AddToViewport();
     }
 
+    AudioComp = CreateAbstractDefaultSubobject<UAudioComponent>(TEXT("Audio"));
+    AudioComp->bAutoActivate = false;
+}
+
+void ADefaultGameModeBase::BeginPlay()
+{
+    Super::BeginPlay();
+    
+    AudioComp->SetSound(BGM);
+    AudioComp->Play();
 }
