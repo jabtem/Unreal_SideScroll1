@@ -24,14 +24,14 @@ ADefaultGameModeBase::ADefaultGameModeBase()
             CurrentWidget->AddToViewport();
     }
 
-    AudioComp = CreateAbstractDefaultSubobject<UAudioComponent>(TEXT("Audio"));
-    AudioComp->bAutoActivate = false;
+    // AudioComp = CreateAbstractDefaultSubobject<UAudioComponent>(TEXT("Audio"));
+    // AudioComp->bAutoActivate = false;
 }
 
 void ADefaultGameModeBase::BeginPlay()
 {
     Super::BeginPlay();
     
-    AudioComp->SetSound(BGM);
-    AudioComp->Play();
+    // AudioComp->SetSound(BGM);
+    // AudioComp->Play();
 }
