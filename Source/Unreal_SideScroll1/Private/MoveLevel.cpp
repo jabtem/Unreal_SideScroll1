@@ -7,6 +7,7 @@
 #include "PlayCharacter.h"
 #include "NiagaraFunctionLibrary.h"
 #include "NiagaraComponent.h"
+#include "Engine/AssetManager.h"
 
 // Sets default values
 AMoveLevel::AMoveLevel()
@@ -25,7 +26,7 @@ void AMoveLevel::BeginPlay()
 	
 	if(PortalEffect)
 	{
-		UNiagaraComponent* NiagaraComp = UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(),PortalEffect, FVector(0.f,1000.f,930.f),GetActorRotation());
+		NiagaraComp = UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(),PortalEffect, FVector(0.f,1000.f,930.f),GetActorRotation());
 	}
 }
 
@@ -36,7 +37,28 @@ void AMoveLevel::NotifyActorBeginOverlap(AActor* OtherActor)
 	ACharacter* Character = Cast<ACharacter>(OtherActor);
 	if(Character)
 	{
-		UGameplayStatics::OpenLevel(this, FName(LevelName));
+		//레벨 이동
+		// UGameplayStatics::OpenLevel(this, FName(LevelName));
+		//레벨 로드
+		FLatentActionInfo LatentInfo;
+		LatentInfo.CallbackTarget = this;
+        LatentInfo.ExecutionFunction = "OnLevelLoaded";
+        LatentInfo.Linkage = 0;
+        LatentInfo.UUID = 0;
+		UGameplayStatics::LoadStreamLevel(this, FName(NextLevelName),true, false, LatentInfo);
+		//UGameplayStatics::UnloadStreamLevel(this, FName(PrevLevelName), LatenInfo,false);
+		//StreamableManager.RequestAsyncLoad(NextLevelName,FStreamableDelegate::CreateUObject(this,&AMoveLevel::OnLevelLoaded));
+
+		//AssetManager->GetStreamableManager().RequestAsyncLoad(NextLevelName,FStreamableDelegate::CreateUObject(this,&AMoveLevel::OnLevelLoaded));
 	}
 }
+
+void AMoveLevel::OnLevelLoaded()
+{
+	NiagaraComp->Deactivate();
+	NiagaraComp->DestroyComponent();
+	FLatentActionInfo LatentInfo;
+	UGameplayStatics::UnloadStreamLevel(this, FName(PrevLevelName), LatentInfo,true);
+}
+
 

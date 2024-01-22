@@ -21,12 +21,23 @@ protected:
 	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
 
 private:
+	UFUNCTION()
+	void OnLevelLoaded();
+
+private:
 	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category=MoveLevel, Meta=(AllowPrivateAccess=true))
-	FString LevelName;
+	FString PrevLevelName;
+
+	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category=MoveLevel, Meta=(AllowPrivateAccess=true))
+	FString NextLevelName;
 
 	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category=MoveLevel, Meta=(AllowPrivateAccess=true))
 	class UNiagaraSystem* PortalEffect;
 
+	UPROPERTY()
+	class UNiagaraComponent* NiagaraComp;
+
 	UPROPERTY(VisibleAnywhere)
 	class UBoxComponent* Trigger;
+
 };
