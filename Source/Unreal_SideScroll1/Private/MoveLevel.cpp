@@ -40,6 +40,7 @@ void AMoveLevel::NotifyActorBeginOverlap(AActor* OtherActor)
 		//레벨 이동
 		// UGameplayStatics::OpenLevel(this, FName(LevelName));
 		//레벨 로드
+		Character->SetActorLocation(FVector(0.f,106.69f,200.f));
 		FLatentActionInfo LatentInfo;
 		LatentInfo.CallbackTarget = this;
         LatentInfo.ExecutionFunction = "OnLevelLoaded";
