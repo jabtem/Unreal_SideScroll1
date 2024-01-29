@@ -267,6 +267,8 @@
 /I "E:\Unreal\UE_4.27\Engine\Source\Runtime\Portal\LauncherPlatform\Public" 
 /I "E:\Unreal\UE_4.27\Engine\Plugins\FX\Niagara\Intermediate\Build\Win64\UE4Editor\Development\NiagaraVertexFactories" 
 /I "E:\Unreal\UE_4.27\Engine\Plugins\FX\Niagara\Source\NiagaraVertexFactories\Public" 
+/I "E:\Unreal\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\LevelSequence" 
+/I "E:\Unreal\UE_4.27\Engine\Source\Runtime\LevelSequence\Public" 
 /I "E:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include" 
 /I "E:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include\cudamanager" 
 /I "E:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include\filebuf" 

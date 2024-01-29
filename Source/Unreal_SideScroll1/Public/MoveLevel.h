@@ -34,6 +34,9 @@ private:
 	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category=MoveLevel, Meta=(AllowPrivateAccess=true))
 	class UNiagaraSystem* PortalEffect;
 
+	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category=MoveLevel, Meta=(AllowPrivateAccess=true))
+	class ALevelSequenceActor* LevelSequenceActor;
+
 	UPROPERTY()
 	class UNiagaraComponent* NiagaraComp;
 
