@@ -39,28 +39,27 @@ void AMoveLevel::NotifyActorBeginOverlap(AActor* OtherActor)
 	ACharacter* Character = Cast<ACharacter>(OtherActor);
 	if(Character)
 	{
+		LevelSequenceActor->SequencePlayer->OnFinished.AddDynamic(this,&AMoveLevel::OnLevelSequencePlayEnded);
 		LevelSequenceActor->SequencePlayer->PlayReverse();
-		
+		//Character->SetActorLocation(FVector(0.f,106.69f,200.f));
 		//레벨 이동
 		// UGameplayStatics::OpenLevel(this, FName(LevelName));
-
-		//레벨 스트리밍
-		// Character->SetActorLocation(FVector(0.f,106.69f,200.f));
-		// FLatentActionInfo LatentInfo;
-		// LatentInfo.CallbackTarget = this;
-        // LatentInfo.ExecutionFunction = "OnLevelLoaded";
-        // LatentInfo.Linkage = 0;
-        // LatentInfo.UUID = 0;
-		// UGameplayStatics::LoadStreamLevel(this, FName(NextLevelName),true, false, LatentInfo);
-		//UGameplayStatics::UnloadStreamLevel(this, FName(PrevLevelName), LatenInfo,false);
-		//StreamableManager.RequestAsyncLoad(NextLevelName,FStreamableDelegate::CreateUObject(this,&AMoveLevel::OnLevelLoaded));
-
-		//AssetManager->GetStreamableManager().RequestAsyncLoad(NextLevelName,FStreamableDelegate::CreateUObject(this,&AMoveLevel::OnLevelLoaded));
 	}
+}
+void AMoveLevel::OnLevelSequencePlayEnded()
+{
+	//레벨 스트리밍
+	FLatentActionInfo LatentInfo;
+	LatentInfo.CallbackTarget = this;
+    LatentInfo.ExecutionFunction = "OnLevelLoaded";
+    LatentInfo.Linkage = 0;
+    LatentInfo.UUID = 0;
+	UGameplayStatics::LoadStreamLevel(this, FName(NextLevelName),true, false, LatentInfo);
 }
 
 void AMoveLevel::OnLevelLoaded()
 {
+	GetWorld()->GetFirstPlayerController()->GetPawn()->SetActorLocation(FVector(0.f,106.69f,200.f));
 	NiagaraComp->Deactivate();
 	NiagaraComp->DestroyComponent();
 	FLatentActionInfo LatentInfo;

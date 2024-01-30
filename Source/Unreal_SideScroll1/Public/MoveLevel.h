@@ -24,6 +24,9 @@ private:
 	UFUNCTION()
 	void OnLevelLoaded();
 
+	UFUNCTION()
+	void OnLevelSequencePlayEnded();
+
 private:
 	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category=MoveLevel, Meta=(AllowPrivateAccess=true))
 	FString PrevLevelName;
