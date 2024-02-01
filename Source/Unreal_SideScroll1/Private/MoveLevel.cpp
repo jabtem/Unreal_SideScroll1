@@ -51,7 +51,7 @@ void AMoveLevel::OnLevelSequencePlayEnded()
 	//레벨 스트리밍
 	FLatentActionInfo LatentInfo;
 	LatentInfo.CallbackTarget = this;
-    LatentInfo.ExecutionFunction = "OnLevelLoaded";
+	LatentInfo.ExecutionFunction = "OnLevelLoaded";
     LatentInfo.Linkage = 0;
     LatentInfo.UUID = 0;
 	UGameplayStatics::LoadStreamLevel(this, FName(NextLevelName),true, false, LatentInfo);
@@ -59,6 +59,7 @@ void AMoveLevel::OnLevelSequencePlayEnded()
 
 void AMoveLevel::OnLevelLoaded()
 {
+	//다음레벨 스트리밍 완료후 콜백
 	GetWorld()->GetFirstPlayerController()->GetPawn()->SetActorLocation(FVector(0.f,106.69f,200.f));
 	NiagaraComp->Deactivate();
 	NiagaraComp->DestroyComponent();
